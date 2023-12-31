@@ -1,3 +1,29 @@
+function cambiarContenido() { 
+  document.getElementById("parrafo").innerHTML = "Reducción del estrés en el sistema cardiovascular: La presión arterial alta ejerce una tensión adicional en las arterias y el corazón, lo que con el tiempo puede causar daño a los vasos sanguíneos y aumentar el riesgo de enfermedades del corazón."
+}
+
+function cambiarContenidoDos() { 
+  document.getElementById("parrafo").innerHTML ="Preservación de la función renal: La hipertensión no controlada puede dañar los riñones y aumentar el riesgo de enfermedad renal crónica. El control de la presión arterial puede ayudar a mantener una función renal óptima."
+}
+
+function cambiarContenidoTres() { 
+  document.getElementById("parrafo").innerHTML = "Prevención de accidentes cerebrovasculares: La presión arterial alta es un factor de riesgo importante para los accidentes cerebrovasculares (derrames cerebrales). Controlar la presión arterial puede reducir el riesgo de sufrir un accidente cerebrovascular."
+}
+
+function cambiarContenidoCuatro() { 
+  document.getElementById("parrafo").innerHTML = "Mayor longevidad y bienestar: Mantener una presión arterial saludable puede contribuir a una vida más larga y a un mayor bienestar general. La hipertensión no controlada puede acortar la expectativa de vida y reducir la calidad de vida."
+}
+
+function cambiarContenidoCinco() { 
+  document.getElementById("parrafo").innerHTML =  "Facilita el control de otros factores de riesgo: El control de la presión arterial puede ayudar a gestionar otros factores de riesgo cardiovascular, como el colesterol alto y la diabetes. Juntos, estos factores de riesgo pueden aumentar significativamente el riesgo de enfermedades cardiovasculares."
+} 
+
+setTimeout(cambiarContenido, 5000);
+setTimeout(cambiarContenidoDos, 10000);
+setTimeout(cambiarContenidoTres, 15000);
+setTimeout(cambiarContenidoCuatro, 20000);
+setTimeout(cambiarContenidoCinco, 25000);
+
 let objetoPresion = {
   priorizarValor: function(sistolica, diastolica) {
     const rangoSistolica = this.calcularRangoSistolica(sistolica);
@@ -107,3 +133,21 @@ document.addEventListener("DOMContentLoaded", function() {
     document.querySelector("#respuesta").textContent = respuesta;
   }
 });
+
+const BOTON_COMPARTIR = document.getElementById("botonCompartir");
+
+BOTON_COMPARTIR.addEventListener("click", ()=>{
+  Toastify({
+    text: "Compartido con éxito!",
+    duration: 3000,
+    newWindow: true,
+    close: true,
+    gravity: "top",
+    position: "right",
+    stopOnFocus: true, 
+    style: {
+      background: "linear-gradient(to right, #00b09b, #96c93d)",
+    },
+  }).showToast();
+  
+})
